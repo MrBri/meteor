@@ -1,0 +1,44 @@
+<head>
+  <title>HackOverflow</title>
+</head>
+
+<body>
+  {{> HackOverflow}}
+</body>
+
+<template name="HackOverflow">
+  {{loginButtons}}
+  <h1>Hack Overflow!</h1>
+
+  {{# if currentUser}}
+    <div class="ask-question">
+      <!-- <label for="question">Ask a question:</label> -->
+      <input type="text" name="questionField" id="questionInput">
+      <input type="button" id="buttonAsk" value="Ask a question">
+    </div>
+  {{/if}}
+  <hr>
+  {{#each questions}}
+    {{> question}}
+  {{/each}}
+
+</template>
+
+<template name="question">
+  <div class="question">
+    <h3>&ldquo;{{question}}&rdquo;</h3>
+    <div class="author">Asked by {{name}}</div><br>
+    {{#each answers}}
+      {{> answer}}
+    {{/each}}
+    <input type="text" class="answerField" id={{_id}}>
+    <input type="button" value="Answer" class="answerBtn">
+  </div>
+</template>
+
+<template name="answer">
+  <div class="answer">
+    <p>{{answer}}</p>
+    <p>&mdash; {{user}}</p>
+  </div>
+</template>

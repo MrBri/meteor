@@ -1,0 +1,31 @@
+/* CSS declarations go here */
+body {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  width: 800px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.ask-question {
+  text-align: center;
+}
+
+#questionInput {
+  width: 500px;
+}
+
+.author {
+  /*text-align: right;*/
+}
+
+.answerField {
+  width: 500px;
+}
+
+.answer {
+  margin-left: 15px;
+  color: #444;
+}
